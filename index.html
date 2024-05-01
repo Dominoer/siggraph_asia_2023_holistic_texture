@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Diffusion-based Holistic Texture Rectification and Synthesis, SIGGRAPH Asia 2023 Conference Paper">
+  <meta name="keywords" content="Texture rectification, texture synthesis, diffusion models">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diffusion-based Holistic Texture Rectification and Synthesis</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Diffusion-based Holistic Texture Rectification and Synthesis</Textarea></h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://dominoer.github.io/">Guoqing Hao</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="http://iizuka.cs.tsukuba.ac.jp/index_eng.html">Satoshi Iizuka</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://kenshohara.github.io/index.html">Kensho Hara</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://esslab.jp/~ess/en/">Edgar Simo-Serra</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://hirokatsukataoka.net/">Hirokatsu Kataoka</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cs.tsukuba.ac.jp/~kfukui/english/indexE.html">Kazuhiro Fukui</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Tsukuba,</span>
+            <span class="author-block"><sup>2</sup>AIST,</span>
+			<span class="author-block"><sup>3</sup>Waseda University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://dl.acm.org/doi/10.1145/3610548.3618233"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2309.14759"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Dominoer/siggraph_asia_2023_holistic_texture"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+			<div class="is-size-5 publication-authors">
+				<h3>SIGGRAPH Asia 2023 Conference Paper</h3>
+			</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <img src="./static/images/representative.jpg" width="200%" />
+      <h2 class="subtitle has-text-centered">
+		Our framework is able to rectify degraded textures, which include occlusions and geometric deformations, and synthesize holistic textures from selected areas.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present a novel framework for rectifying occlusions and distortions in degraded texture samples from natural images. 	
+          </p>
+          <p>
+            Traditional texture synthesis approaches focus on generating textures from pristine samples, 
+			which necessitate meticulous preparation by humans and are often unattainable in most natural images. 
+			These challenges stem from the frequent occlusions and distortions of texture samples in natural images 
+			due to obstructions and variations in object surface geometry. To address these issues, 
+			we propose a framework that synthesizes holistic textures from degraded samples in natural images, 
+			extending the applicability of exemplar-based texture synthesis techniques. Our framework utilizes a conditional Latent
+			Diffusion Model (LDM) with a novel occlusion-aware latent transformer. This latent transformer not only effectively encodes texture
+			features from partially-observed samples necessary for the generation process of the LDM, but also explicitly captures long-range
+			dependencies in samples with large occlusions. To train our model, we introduce a method for generating synthetic data by applying
+			geometric transformations and free-form mask generation to clean textures. 
+	      </p>
+		  <p>
+			Experimental results demonstrate that our framework significantly outperforms existing methods both quantitatively and quantitatively. 
+			Furthermore, we conduct comprehensive ablation studies to validate the different components of our proposed framework. 
+			Results are corroborated by a perceptual user study which highlights the efficiency of our proposed approach.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+	<!-- Paper video. -->
+	<div class="columns is-centered has-text-centered">
+		<div class="column is-four-fifths">
+			<h2 class="title is-3">Fast Forward Video</h2>
+			<div class="publication-video">
+			<!-- <iframe src="./static/images/fast_forward.mov"
+					frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+			<video width="660" height="400" controls>
+				<source src="./static/images/fast_forward.mp4" type="video/mp4">
+			</video>
+			</div>
+			<table align=center width=300px>
+				<br>
+				<tr>
+					<center>
+						<span style="font-size:20px"><a href='./static/images/SA23_present.pdf'>[Slides]</a>
+						</span>
+					</center>
+				</tr>
+			</table>
+		</div>
+		</div>
+		<!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Framework. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Framework</h2>
+		<img src="./static/images/framework.jpg" width="200%" />
+
+        <div class="content has-text-justified">
+          <p>
+            Our synthetic training dataset is constructed by applying random geometric transformations and free-form masks on planar textures. 
+			During the training phase, our framework takes as input both degraded and planar textures, and performs forward diffusion and 
+			reverse sampling processes. Upon completion of the training, our approach takes as input a degraded texture sample and outputs a rectified texture.
+          </p>
+        </div>
+        <!--/ Framework. -->
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+  
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@Inproceedings{HaoSIGGRAPHASIA2023,
+		author    = {Guoqing Hao and Satoshi Iizuka and Kensho Hara and Edgar Simo-Serra and Hirokatsu Kataoka and Kazuhiro Fukui},
+		title     = {{Diffusion-based Holistic Texture Rectification and Synthesis}},
+		booktitle = "ACM SIGGRAPH Asia 2023 Conference Papers",
+		year      = 2023,
+	 }</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://arxiv.org/pdf/2309.14759">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/Dominoer" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+            Source code mainly borrowed from <a href="https://keunhong.com/">Keunhong Park</a>'s
+			<a href="https://nerfies.github.io/">Nerfies website</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
