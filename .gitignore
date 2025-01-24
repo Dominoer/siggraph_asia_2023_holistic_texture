@@ -1,0 +1,41 @@
+# Ignore the logs folder
+logs/
+
+# Byte-compiled / compiled Python files
+*.py[cod]
+__pycache__/
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+.ipynb_checkpoints/
+
+# IDE / Editor
+.vscode/
+*.swp
+*.swo
+*~
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db

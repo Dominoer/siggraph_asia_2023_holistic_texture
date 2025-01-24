@@ -53,14 +53,24 @@ We provide a VQ-VAE model that has been fine-tuned on our texture dataset to imp
 
 ## Training
 
-Specify paths in the train.sh script before runing the script.
+Specify paths in the config file before runing the script.
 ```
 python main.py --base configs/latent-diffusion/texture-ldm-vq-8.yaml -t --gpus 0
 ```
 
-## ToDo
+## Inference
 
- - [ ] Implement Gradio web interface
+1. Download pretrained model from [[Google Drive](https://drive.google.com/file/d/177p45j30pN9FlU1h3NFEz6l75Zo0dU5a/view?usp=drive_link)]
+
+2. Place the checkpoint in the following directory:
+```
+'./logs/texture-ldm-vq-8/checkpoints'
+```
+
+3. Prepare a real-world image containing the desired texture, along with a corresponding mask indicating the target region. Then run:
+```
+python inference.py --image /path_to_image/*.jpg --mask /path_to_mask/*.png
+```
 
 ## Citation
 
